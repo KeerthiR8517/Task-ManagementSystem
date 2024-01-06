@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<head>
+	<header>
+        <a href="index.html" class="active">Home</a>
+        <a href="Login.html">Admin</a>
+        <a href="Ulogin.html">Employee</a>    
+    </header>
+    <title>Task Management System</title> 
+    <style>
+        h1
+         {
+            text-align: center;
+         }
+        .main 
+        {
+            text-align: center;
+        }
+         body
+          {
+            background-image: url('image/book2.jpg'); 
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+         }
+	    header
+	         {
+	    position: fixed;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    padding: 10px 120px 5px;
+	    background:#466;
+	    justify-content: space-between;
+	    align-items: center;
+	    z-index: 1000;
+	    transition: 0.25;
+	      }
+	       
+		a{
+		color:bisque;
+	    margin-right: 35px;
+		text-decoration: none;
+		font-size: 20px;	
+	    }
+
+	     .login 
+	     {
+	        background-color: #369;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 400px;
+        text-align: center;
+        }
+
+        .login h2
+         {
+            margin-bottom: 20px;
+         }
+
+        .login input 
+        {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .login button 
+        {
+            background-color: #475;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            
+        }
+         button:hover {
+            background-color:black;
+        }
+    
+    </style>
+     <script>
+     function validateForm() {
+     var adminName = document.f1.Admin.value.trim();
+     var password = document.f1.Password.value;
+
+     if (adminName === "admin" && password === "password123") {
+         alert("Login Successful");
+         window.location.href = "homeStart.html";
+            return false; 
+            } 
+            else
+            {
+                displayError("Invalid credentials");
+                return false;
+            }
+        }
+        function displayError(message) {
+        var errorContainer = document.getElementById("error-message");
+        errorContainer.innerText = message;
+        errorContainer.style.color = "red";
+        }
+    </script>
+</head>
+<body>
+	
+	 <div class="login">
+     <h4>WELCOME</h4>
+     <h1>TASK MANAGEMENT </h1>
+     <form name="f1" method="post" action="homeStart.html" onsubmit="return validateForm()">
+     <div class="main">
+     <label for="Admin">Admin</label>
+     <input type="text" placeholder="Enter name" name="Admin" required><br><br>
+     <label for="pswrd">Password</label>
+     <input type="password" placeholder="Enter Password" name="Password" required>
+     <button type="submit">Login</button>
+     <p id="error-message"></p>
+     </div>
+     </form>
+</body>
+</html>

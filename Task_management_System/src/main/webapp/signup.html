@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<header>
+        <a href="index.html">Home</a>
+        <a href="Ulogin.html">Back</a>
+	</header>
+    <style>
+		body
+          {
+            background-image: url('image/book3.jpeg');
+            background-repeat: no-repeat;
+            background-size: 3000px 1000px;
+            }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color:#466;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .container {
+            width: 25%;
+            margin: auto;
+            padding: 20px;
+            background-color:#469;
+            margin-top: 50px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        .password-toggle {
+            position: relative;
+        }
+
+        .password-toggle input[type="password"] {
+            padding-right: 30px;
+        }
+
+        .toggle-btn {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        button {
+            background-color: #466;
+            color: white;
+            padding: 15px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color:black;
+        }
+        
+        a{
+	    color:bisque;
+        margin-right: 35px;
+	    text-decoration: none;
+	    font-size: 20px;	
+        }
+		     
+        h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+        margin-left:550px;
+       }
+       
+    </style>
+</head>
+<body>
+  <h1>Sign Up</h1>
+  <div class="container">
+  <form action="signup" method="post" style="width:300px">
+        <label for="employee_id">Employee Id:</label>
+        <input type="text" id="employee_id" name="employee_id" required>  <br>
+        <label for="employee_name">Employee Name:</label>
+        <input type="text" id="employee_name" name="employee_name" required>   <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>  <br>
+        <label for="password" class="password-toggle" span class="toggle-btn" onclick="togglePasswordVisibility('password')"> password:     Show</span></label>
+        <input type="password" id="password" name="password" required>
+       
+        <button type="submit" value="Ulogin.html">Sign Up</button>
+    </form>
+</div>
+<script>
+    function togglePasswordVisibility(id)
+     {
+        const passwordInput = document.getElementById(id);
+        passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
+     }
+</script>
+</body>
+</html>
+
+

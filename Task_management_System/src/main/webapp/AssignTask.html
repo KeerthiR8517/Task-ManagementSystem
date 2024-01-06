@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign Task</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:#469;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #469;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #466;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Assign Task</h2>
+    <form action="AssignTaskServlet" method="post">
+        <label for="employee">Select Employee:</label>
+        <select id="employee" name="employee" required>
+		<option value="" disabled selected>Select Employee </option>
+            <option value="1"> 1234 - Ramesh</option>
+            <option value="2"> 123 - Martin</option>
+             <option value="6"> 101810 -Ram </option>
+           <option value="6"> 5678 - Kavya </option>
+        </select>
+
+        <label for="task">Task Description:</label>
+        <textarea id="task" name="task" rows="4" required placeholder="Enter your  description..."></textarea>
+
+        <label for="startDateTime">Start Date and Time:</label>
+        <input type="datetime-local" id="startDateTime" name="startDateTime" required>
+
+        <label for="endDateTime">End Date and Time:</label>
+        <input type="datetime-local" id="endDateTime" name="endDateTime" required>
+        <br><br>
+        <button type="submit">Assign Task</button>
+    </form>
+</div>
+
